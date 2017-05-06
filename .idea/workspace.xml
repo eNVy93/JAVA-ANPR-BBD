@@ -2,27 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d769232-84d2-4ee4-8cda-7dd4671bd527" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JAVA ANPR BBD/ImageProcessing$1.class" afterPath="$PROJECT_DIR$/out/production/JAVA ANPR BBD/ImageProcessing$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JAVA ANPR BBD/ImageProcessing$2.class" afterPath="$PROJECT_DIR$/out/production/JAVA ANPR BBD/ImageProcessing$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JAVA ANPR BBD/ImageProcessing$3.class" afterPath="$PROJECT_DIR$/out/production/JAVA ANPR BBD/ImageProcessing$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JAVA ANPR BBD/ImageProcessing$4.class" afterPath="$PROJECT_DIR$/out/production/JAVA ANPR BBD/ImageProcessing$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JAVA ANPR BBD/ImageProcessing.class" afterPath="$PROJECT_DIR$/out/production/JAVA ANPR BBD/ImageProcessing.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JAVA ANPR BBD/Main.class" afterPath="$PROJECT_DIR$/out/production/JAVA ANPR BBD/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JAVA ANPR BBD/utils/Utils.class" afterPath="$PROJECT_DIR$/out/production/JAVA ANPR BBD/utils/Utils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output0.jpg" afterPath="$PROJECT_DIR$/output0.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output1.jpg" afterPath="$PROJECT_DIR$/output1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output2.jpg" afterPath="$PROJECT_DIR$/output2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output3.jpg" afterPath="$PROJECT_DIR$/output3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output4.jpg" afterPath="$PROJECT_DIR$/output4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output5.jpg" afterPath="$PROJECT_DIR$/output5.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output6.jpg" afterPath="$PROJECT_DIR$/output6.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output7.jpg" afterPath="$PROJECT_DIR$/output7.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output8.jpg" afterPath="$PROJECT_DIR$/output8.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output9.jpg" afterPath="$PROJECT_DIR$/output9.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ImageProcessing.java" afterPath="$PROJECT_DIR$/src/ImageProcessing.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/Utils.java" afterPath="$PROJECT_DIR$/src/utils/Utils.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,7 +19,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="459">
@@ -47,6 +28,16 @@
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -181,6 +172,7 @@
         <option value="$PROJECT_DIR$/src/ImageProcessing.java" />
         <option value="$PROJECT_DIR$/src/utils/Utils.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -1046,6 +1038,14 @@
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
