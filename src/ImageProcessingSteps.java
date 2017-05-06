@@ -17,6 +17,7 @@ public class ImageProcessingSteps {
     public static final String DILATION = "3step_dilation";
     public static final String SOBEL = "4step_sobel";
     public static final String THRESHOLD = "4step_threshold";
+    public static final String CANNY = "canny_edge_detection";
 
 
     public static ArrayList<Mat> toGrayscaleList(ArrayList<Mat> matImagesList) {
@@ -153,6 +154,21 @@ public class ImageProcessingSteps {
         }
         return matImageListOut;
 
+    }
+
+    public static ArrayList<Mat> cannyEdgeDetection(ArrayList<Mat> matImagesList){
+        ArrayList<Mat> matImageListOut = new ArrayList<>();
+        System.out.println("Applying canny edge detection...");
+        for(int i =0; i<matImagesList.size();i++){
+            Mat inputImage = matImagesList.get(i);
+            Mat outputImage = new Mat();
+            Mat edges = new Mat();
+            int lowThreshold = 60;
+            int ratio = 3;
+            Imgproc.Canny(inputImage,outputImage,lowThreshold,lowThreshold * ratio);
+            matImageListOut.add(outputImage);
+        }
+        return matImageListOut;
     }
 
 }

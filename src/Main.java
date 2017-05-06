@@ -57,6 +57,11 @@ public class Main {
         ArrayList<Mat> thresholdImageList = processingWithSteps.imageThreshold(dilatedImageList);
         ArrayList<BufferedImage> thresholdImageListBuffered = utils.matToBufferedImage(thresholdImageList);
         utils.outputImages(thresholdImageListBuffered,ImageProcessingSteps.THRESHOLD);
+
+        //6 - Canny edge detection. (Bandau su grayscale)
+        ArrayList<Mat> cannyImageList = processingWithSteps.cannyEdgeDetection(grayImageList);
+        ArrayList<BufferedImage> cannyImageListBuffered = utils.matToBufferedImage(cannyImageList);
+        utils.outputImages(cannyImageListBuffered,ImageProcessingSteps.CANNY);
     }
 
 //    public static void toHistogram(Mat matImage) {
