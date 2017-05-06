@@ -1,7 +1,4 @@
-import org.opencv.core.CvType;
-import org.opencv.core.Mat;
-import org.opencv.core.Point;
-import org.opencv.core.Size;
+import org.opencv.core.*;
 import org.opencv.imgproc.Imgproc;
 
 import java.util.ArrayList;
@@ -27,8 +24,8 @@ public class ImageProcessing {
     public static Mat imageDilate(Mat image) {
         Mat imageOut = new Mat(); //tai ka grazins metodas
         int erosion_size = 3;
-        Mat element = Imgproc.getStructuringElement(Imgproc.MORPH_ERODE, new Size(2 * erosion_size + 1, 2 * erosion_size + 1));
-        Imgproc.erode(image, imageOut, element);
+        Mat element = Imgproc.getStructuringElement(Imgproc.MORPH_DILATE, new Size(2 * erosion_size + 1, 2 * erosion_size + 1));
+        Imgproc.dilate(image, imageOut, element);
         return imageOut;
     }
 
@@ -118,10 +115,12 @@ public class ImageProcessing {
             inputImage = gausianBlur(inputImage);
             inputImage = imageDilate(inputImage);
             Mat outputImage = imageThreshold(inputImage);
-//            Mat outputImage = imageSobel(inputImage,verticalSobelKernel);
+//          Mat outputImage = imageSobel(inputImage,verticalSobelKernel);
             matImageListOut.add(outputImage);
         }
         return matImageListOut;
     }
+
+
 
 }

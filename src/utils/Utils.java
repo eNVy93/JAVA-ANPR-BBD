@@ -88,7 +88,6 @@ public class Utils {
         for (File file : fileList) {
             String filePath = file.getAbsolutePath();
             filePathList.add(filePath);
-
             //System.out.println(file.toString());
         }
         return filePathList;
@@ -105,16 +104,17 @@ public class Utils {
 
             //System.out.println(path);
         }
-        for (Mat image :
-                matImageList) {
-            //System.out.println(image.toString());
-        }
+//        for (Mat image :
+//                matImageList) {
+//            System.out.println(image.toString());
+//        }
         return matImageList;
     }
 
 
     public static ArrayList<BufferedImage> matToBufferedImage(ArrayList<Mat> matImagesList) {
         ArrayList<BufferedImage> bufferedImageList = new ArrayList<>();
+
         for (int i = 0; i < matImagesList.size(); i++) {
             BufferedImage bufferedImage = matToBufferedImage(matImagesList.get(i));
             bufferedImageList.add(bufferedImage);
@@ -127,12 +127,16 @@ public class Utils {
         return bufferedImageList;
     }
 
+//    public static void calculateHistogram(ArrayList<Mat> someList,Mat x_hist){
+//
+//    }
+
 
     public static void outputImages(ArrayList<BufferedImage> imageList) {
         System.out.println("Outputing images...");
         String path = "C:\\Users\\nevyt\\Desktop\\BBD project JAVA\\JAVA ANPR BBD\\Resources\\Output";
-        for (int i=0; i< imageList.size(); i++) {
-            File outputfile = new File("output"+i+".jpg");
+        for (int i = 0; i < imageList.size(); i++) {
+            File outputfile = new File(path+"\\output" + i + ".jpg");
             try {
                 ImageIO.write(imageList.get(i), "jpg", outputfile);
             } catch (IOException e) {
