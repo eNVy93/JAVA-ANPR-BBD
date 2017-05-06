@@ -1,13 +1,21 @@
 import org.opencv.core.*;
 import org.opencv.imgproc.Imgproc;
+import utils.Utils;
 
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 /**
  * Created by nevyt on 4/30/2017.
  */
 public class ImageProcessing {
+    String step1 = "";
+    String step2 = "";
+    String step3 = "";
+    String step4 = "";
+    String step5 = "";
 
+    public static Utils utils = new Utils();
 
     public static Mat toGrayscale(Mat image) {
         Mat imageOut = new Mat(); //tai ka grazins metodas
@@ -42,7 +50,7 @@ public class ImageProcessing {
         return imageOut;
     }
 
-    public static ArrayList<Mat> filterImages(ArrayList<Mat> matImagesList) {
+    public static ArrayList<BufferedImage> filterImages(ArrayList<Mat> matImagesList) {
 
         int kernelSize = 9;
         Mat verticalKernel = new Mat(kernelSize, kernelSize, CvType.CV_32F) {  // veritcal mask
@@ -118,7 +126,7 @@ public class ImageProcessing {
 //          Mat outputImage = imageSobel(inputImage,verticalSobelKernel);
             matImageListOut.add(outputImage);
         }
-        return matImageListOut;
+        return utils.matToBufferedImage(matImageListOut);
     }
 
 

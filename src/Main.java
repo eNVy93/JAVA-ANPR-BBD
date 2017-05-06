@@ -10,25 +10,53 @@ import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 import utils.Utils;
 
+import java.awt.*;
+import java.awt.image.AreaAveragingScaleFilter;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+
+        ImageProcessing process = new ImageProcessing();
+        ImageProcessingSteps processingWithSteps = new ImageProcessingSteps();
+        Utils utils = new Utils();
+
         String testImagePath = "C:\\Users\\nevyt\\Desktop\\BBD project JAVA\\JAVA ANPR BBD\\Resources\\Input\\mazda.jpg";
         Mat testImage = Imgcodecs.imread(testImagePath);
         String path = "C:\\Users\\nevyt\\Desktop\\BBD project JAVA\\JAVA ANPR BBD\\Resources\\Input";
-        ImageProcessing process = new ImageProcessing();
-        Utils utils = new Utils();
+
+
         ArrayList<String> filePathList = utils.filePathsToList(path);
         ArrayList<Mat> matImagesList = utils.filePathsToMatImageList(filePathList);
-        ArrayList<Mat> processedImagesList = process.filterImages(matImagesList);
-        ArrayList<BufferedImage> bufferedImagesList = utils.matToBufferedImage(processedImagesList);
-        utils.outputImages(bufferedImagesList);
-//        toHistogram(testImage);
+        ArrayList<BufferedImage> processedImagesList = process.filterImages(matImagesList);
+        utils.outputImages(processedImagesList,"final"); // all steps together
 
+
+        //STEPS.............................................................................\
+        //1 - toGrayscale -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+        ArrayList<Mat> grayImageList = processingWithSteps.toGrayscaleList(matImagesList);
+        ArrayList<BufferedImage> grayImageListBuffered = utils.matToBufferedImage(grayImageList);
+        utils.outputImages(grayImageListBuffered,ImageProcessingSteps.GRAYSCALE);
+        //2 - Gaussian blur -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+        ArrayList<Mat> gaussianImageList = processingWithSteps.gausianBlur(grayImageList);
+        ArrayList<BufferedImage> gaussianImageListBuffered = utils.matToBufferedImage(gaussianImageList);
+        utils.outputImages(gaussianImageListBuffered,ImageProcessingSteps.GAUSSIAN);
+        //3 - Dilation -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+        ArrayList<Mat> dilatedImageList = processingWithSteps.imageDilate(gaussianImageList);
+        ArrayList<BufferedImage> dilatedImageListBuffered = utils.matToBufferedImage(dilatedImageList);
+        utils.outputImages(dilatedImageListBuffered,ImageProcessingSteps.DILATION);
+        //4 - Sobel  -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_  // step excluded for now
+//        ArrayList<Mat> sobelImageList = processingWithSteps.imageSobel(dilatedImageList); // default kernel - vertical
+//        ArrayList<BufferedImage> sobelImageListBuffered = utils.matToBufferedImage(sobelImageList);
+//        utils.outputImages(sobelImageListBuffered,ImageProcessingSteps.SOBEL);
+        //5 - Threshold -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+        ArrayList<Mat> thresholdImageList = processingWithSteps.imageThreshold(dilatedImageList);
+        ArrayList<BufferedImage> thresholdImageListBuffered = utils.matToBufferedImage(thresholdImageList);
+        utils.outputImages(thresholdImageListBuffered,ImageProcessingSteps.THRESHOLD);
     }
 
 //    public static void toHistogram(Mat matImage) {

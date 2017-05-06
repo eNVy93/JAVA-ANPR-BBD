@@ -132,11 +132,13 @@ public class Utils {
 //    }
 
 
-    public static void outputImages(ArrayList<BufferedImage> imageList) {
+    public static void outputImages(ArrayList<BufferedImage> imageList, String stepName) {
         System.out.println("Outputing images...");
-        String path = "C:\\Users\\nevyt\\Desktop\\BBD project JAVA\\JAVA ANPR BBD\\Resources\\Output";
+        String path = "C:\\Users\\nevyt\\Desktop\\BBD project JAVA\\JAVA ANPR BBD\\Resources\\Output\\";
+        String fullPath = "C:\\Users\\nevyt\\Desktop\\BBD project JAVA\\JAVA ANPR BBD\\Resources\\Output\\" + stepName;
         for (int i = 0; i < imageList.size(); i++) {
-            File outputfile = new File(path+"\\output" + i + ".jpg");
+            new File(path + "\\" + stepName).mkdir();
+            File outputfile = new File(fullPath + "\\output" + i + ".jpg");
             try {
                 ImageIO.write(imageList.get(i), "jpg", outputfile);
             } catch (IOException e) {
