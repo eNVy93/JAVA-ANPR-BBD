@@ -12,12 +12,12 @@ import java.util.ArrayList;
 public class ImageProcessingSteps {
 
 
-    public static final String GRAYSCALE = "1step_toGrayscale" ;
-    public static final String GAUSSIAN = "2step_gaussianBlur";
-    public static final String DILATION = "3step_dilation";
-    public static final String SOBEL = "4step_sobel";
-    public static final String THRESHOLD = "4step_threshold";
-    public static final String CANNY = "canny_edge_detection";
+    public static final String GRAYSCALE = "toGrayscale" ;
+    public static final String GAUSSIAN = "toGaussian";
+    public static final String DILATION = "toDilation";
+    public static final String SOBEL = "toSobel";
+    public static final String THRESHOLD = "toThreshold";
+    public static final String CANNY = "toCannyEdge";
 
 
     public static ArrayList<Mat> toGrayscaleList(ArrayList<Mat> matImagesList) {

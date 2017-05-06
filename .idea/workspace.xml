@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1d769232-84d2-4ee4-8cda-7dd4671bd527" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ImageProcessingSteps.java" afterPath="$PROJECT_DIR$/src/ImageProcessingSteps.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -64,17 +63,17 @@
       <file leaf-file-name="ImageProcessingSteps.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ImageProcessingSteps.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1628">
-              <caret line="19" column="62" lean-forward="false" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
+            <state relative-caret-position="418">
+              <caret line="19" column="51" lean-forward="false" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="initializer##0;class#2618:2993" expanded="false" />
-                <element signature="class#3030:3406" expanded="false" />
-                <element signature="initializer##0;class#3030:3406" expanded="false" />
-                <element signature="class#3447:3822" expanded="false" />
-                <element signature="initializer##0;class#3447:3822" expanded="false" />
-                <element signature="class#3864:4241" expanded="false" />
-                <marker date="1494078393499" expanded="false" signature="2661:2993" ph="{...}" />
+                <element signature="initializer##0;class#2583:2958" expanded="false" />
+                <element signature="class#2995:3371" expanded="false" />
+                <element signature="initializer##0;class#2995:3371" expanded="false" />
+                <element signature="class#3412:3787" expanded="false" />
+                <element signature="initializer##0;class#3412:3787" expanded="false" />
+                <element signature="class#3829:4206" expanded="false" />
+                <marker date="1494079242910" expanded="false" signature="2626:2958" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -122,8 +121,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/ImageProcessing.java" />
         <option value="$PROJECT_DIR$/src/utils/Utils.java" />
-        <option value="$PROJECT_DIR$/src/ImageProcessingSteps.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/ImageProcessingSteps.java" />
       </list>
     </option>
   </component>
@@ -907,17 +906,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ImageProcessingSteps.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1628">
-          <caret line="19" column="62" lean-forward="false" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
+        <state relative-caret-position="418">
+          <caret line="19" column="51" lean-forward="false" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="initializer##0;class#2618:2993" expanded="false" />
-            <element signature="class#3030:3406" expanded="false" />
-            <element signature="initializer##0;class#3030:3406" expanded="false" />
-            <element signature="class#3447:3822" expanded="false" />
-            <element signature="initializer##0;class#3447:3822" expanded="false" />
-            <element signature="class#3864:4241" expanded="false" />
-            <marker date="1494078393499" expanded="false" signature="2661:2993" ph="{...}" />
+            <element signature="initializer##0;class#2583:2958" expanded="false" />
+            <element signature="class#2995:3371" expanded="false" />
+            <element signature="initializer##0;class#2995:3371" expanded="false" />
+            <element signature="class#3412:3787" expanded="false" />
+            <element signature="initializer##0;class#3412:3787" expanded="false" />
+            <element signature="class#3829:4206" expanded="false" />
+            <marker date="1494079242910" expanded="false" signature="2626:2958" ph="{...}" />
           </folding>
         </state>
       </provider>
