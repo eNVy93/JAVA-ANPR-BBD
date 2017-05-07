@@ -17,18 +17,36 @@ public class ImageProcessing {
 
     public static Utils utils = new Utils();
 
+    /**
+     * Method that turns a colored Mat image to grayscale
+     *
+     * @param image - source image file
+     * @return returns filtered image
+     */
     public static Mat toGrayscale(Mat image) {
         Mat imageOut = new Mat(); //tai ka grazins metodas
         Imgproc.cvtColor(image, imageOut, Imgproc.COLOR_RGB2GRAY);
         return imageOut;
     }
 
+    /**
+     * Method that adds gaussian blur to an image
+     *
+     * @param image - Mat image
+     * @return returns filtered image
+     */
     public static Mat gausianBlur(Mat image) {
         Mat imageOut = new Mat(); //tai ka grazins metodas
         Imgproc.GaussianBlur(image, imageOut, new Size(7, 7), 0);
         return imageOut;
     }
 
+    /**
+     * Method that dilates or erodes an image
+     *
+     * @param image - Mat image
+     * @return returns filtered image
+     */
     public static Mat imageDilate(Mat image) {
         Mat imageOut = new Mat(); //tai ka grazins metodas
         int erosion_size = 3;
@@ -37,6 +55,13 @@ public class ImageProcessing {
         return imageOut;
     }
 
+    /**
+     * Method that adds sobel filter to an image
+     *
+     * @param image  - Mat image
+     * @param kernel - matrix used for filtering
+     * @return returns filtered image
+     */
     public static Mat imageSobel(Mat image, Mat kernel) {
         Mat imageOut = new Mat();
         int kernelSize = 9;
@@ -44,12 +69,24 @@ public class ImageProcessing {
         return imageOut;
     }
 
+    /**
+     * Method that turns a Mat image to binary Mat image
+     *
+     * @param image - Mat image
+     * @return returns filtered image
+     */
     public static Mat imageThreshold(Mat image) {
         Mat imageOut = new Mat(); //tai ka grazins metodas
         Imgproc.threshold(image, imageOut, 73, 255, Imgproc.THRESH_BINARY); //57 thresh wtih blur was nice; 63 thresh without blur was nice
         return imageOut;
     }
 
+    /**
+     * A method that uses the filters of this class to process an image
+     *
+     * @param matImagesList - list of Mat images
+     * @return returns filtered image
+     */
     public static ArrayList<BufferedImage> filterImages(ArrayList<Mat> matImagesList) {
 
         int kernelSize = 9;
@@ -128,7 +165,6 @@ public class ImageProcessing {
         }
         return utils.matToBufferedImage(matImageListOut);
     }
-
 
 
 }

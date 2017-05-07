@@ -19,7 +19,11 @@ public class ImageProcessingSteps {
     public static final String THRESHOLD = "toThreshold";
     public static final String CANNY = "toCannyEdge";
 
-
+    /**
+     * Method that changes Mat images color to grayscale
+     * @param matImagesList - list of Mat images
+     * @return filtered list of Mat images
+     */
     public static ArrayList<Mat> toGrayscaleList(ArrayList<Mat> matImagesList) {
 
         ArrayList<Mat> matImageListOut = new ArrayList<>();
@@ -36,6 +40,11 @@ public class ImageProcessingSteps {
 
     }
 
+    /**
+     * Method that adds gaussian blur to all the images in the list
+     * @param matImagesList - list of Mat images
+     * @return filtered list of Mat images
+     */
     public static ArrayList<Mat> gausianBlur(ArrayList<Mat> matImagesList) {
 
         ArrayList<Mat> matImageListOut = new ArrayList<>();
@@ -51,6 +60,11 @@ public class ImageProcessingSteps {
 
     }
 
+    /**
+     * Method that dilates images in the list
+     * @param matImagesList - list of Mat images
+     * @return filtered list of Mat images
+     */
     public static ArrayList<Mat> imageDilate(ArrayList<Mat> matImagesList) {
         ArrayList<Mat> matImageListOut = new ArrayList<>();
         System.out.println("Dilating image/Eroding image...");
@@ -67,6 +81,11 @@ public class ImageProcessingSteps {
 
     }
 
+    /**
+     * Method that adds sobel filter to the list of images
+     * @param matImagesList - Mat images list
+     * @return filtered list of Mat images
+     */
     public static ArrayList<Mat> imageSobel(ArrayList<Mat> matImagesList) {
         ArrayList<Mat> matImageListOut = new ArrayList<>();
         int kernelSize = 9;
@@ -136,13 +155,18 @@ public class ImageProcessingSteps {
         for (int i = 0; i < matImagesList.size(); i++) {
             Mat inputImage = matImagesList.get(i);
             Mat outputImage = new Mat(); //tai ka grazins metodas
-            Imgproc.filter2D(inputImage, outputImage, -1, verticalKernel);
+            Imgproc.filter2D(inputImage, outputImage, -1, verticalSobelKernel);
             matImageListOut.add(outputImage);
         }
         return matImageListOut;
 
     }
 
+    /**
+     * Method that turns images in the list to binary images
+     * @param matImagesList - Mat images list
+     * @return filtered list of Mat images
+     */
     public static ArrayList<Mat> imageThreshold(ArrayList<Mat> matImagesList) {
         ArrayList<Mat> matImageListOut = new ArrayList<>();
         System.out.println("Dilating image/Eroding image...");
@@ -156,6 +180,11 @@ public class ImageProcessingSteps {
 
     }
 
+    /**
+     * Filter that adds canny edge detection to the list of images
+     * @param matImagesList - Mat images list
+     * @return filtered list of Mat images
+     */
     public static ArrayList<Mat> cannyEdgeDetection(ArrayList<Mat> matImagesList){
         ArrayList<Mat> matImageListOut = new ArrayList<>();
         System.out.println("Applying canny edge detection...");
